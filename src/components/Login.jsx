@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios'; // Ensure axios is imported
 import InputField from './InputField';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate,Link } from 'react-router-dom'; // Import useNavigate
 import { ThemeContext } from '../ThemeContext'; // Import the theme context
 
 const Login = () => {
@@ -59,7 +59,7 @@ const Login = () => {
       <p>{message}</p>
 
       <p className="signup-prompt">
-        Don't have an account? <a href="/register" className="signup-link">Register</a>
+        Don't have an account? <Link to="/register" className="signup-link">Register</Link>
       </p>
     </div>
   );

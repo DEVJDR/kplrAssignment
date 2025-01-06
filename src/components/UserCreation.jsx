@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import InputField from './InputField';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate,Link } from 'react-router-dom'; 
 
 const UserCreation = () => {
   const [username, setUsername] = useState('');
@@ -56,7 +56,7 @@ const UserCreation = () => {
       <p>{message}</p>
 
       <p className="signup-prompt">
-        Already have an account? <a href="/login" className="signup-link">Log In</a>
+        Already have an account? <Link to="/login" className="signup-link">Log In</Link>
       </p>
     </div>
   );
