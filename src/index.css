@@ -1,0 +1,396 @@
+/* Importing Google Fonts - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark {
+  background: linear-gradient(135deg, #5F41E4, #4320df); /* Stunning dark gradient */
+}
+
+body.dark .login-container {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+}
+
+body.dark .login-button {
+  background: linear-gradient(135deg, #5F41E4, #4320df); /* Gradient button */
+}
+
+body.dark .login-button:hover {
+  background: linear-gradient(135deg, #4320df, #5F41E4); /* Reverse gradient on hover */
+}
+
+/* Light Theme */
+body.light {
+  background: linear-gradient(135deg, #FF7F50, #FFB6C1); /* Coral to soft pink gradient */
+}
+
+body.light .login-container {
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+}
+
+body.light .login-button {
+  background: linear-gradient(135deg, #FF6F00, #FF4500); /* Bright orange gradient */
+}
+
+body.light .login-button:hover {
+  background: linear-gradient(135deg, #FF4500, #FF6F00); /* Reverse gradient on hover */
+}
+
+/* Dashboard Styles */
+/* Centering the content */
+.dashboard-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  
+  width: 100%;
+}
+
+.dashboard-container {
+  position: relative; /* For proper positioning of the child */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFB6C1, #FFD700); /* Light gradient */
+  color: #333;
+}
+
+.dashboard-container.dark {
+  background: linear-gradient(135deg, #5F41E4, #4320df); /* Dark gradient */
+  color: #fff;
+}
+
+
+/* Dark Theme */
+.dashboard-container.dark {
+  background: linear-gradient(135deg, #5f41e4, #4320df);
+  color: #fff;
+}
+
+.dashboard-container.light {
+  background: linear-gradient(135deg, #ffb6c1, #ffd700);
+  color: #333;
+}
+
+.dashboard-content {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+}
+
+.dashboard-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.dashboard-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0 2rem;
+  color: #666;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  margin-top: 1.5rem; /* Reduce spacing above the cards */
+  gap: 1rem; /* Reduce spacing between cards */
+}
+
+.stats-card {
+  background: #fff;
+  padding: 1rem; /* Reduce padding to decrease height */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  flex: 1 1 calc(33.333% - 1rem); /* Fit three cards per row */
+  max-width: calc(33.333% - 1rem); /* Consistent width */
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px); /* Subtle hover effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.stats-card svg {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem; /* Slightly smaller icon size */
+}
+
+.stats-card h3 {
+  font-size: 0.7rem; /* Smaller heading size */
+  font-weight: 670;
+  color: #333;
+  margin: 0.5rem 0 0.25rem; /* Reduce vertical spacing */
+}
+
+.stats-card p {
+  font-size: 1.25rem; /* Slightly smaller text size */
+  font-weight: 700;
+  color: #666;
+  margin: 0; /* Remove extra margins */
+}
+
+
+.theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.primary-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+/* Button Styling */
+.primary-btn {
+  background: linear-gradient(135deg, #5F41E4, #4320df);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, #4320df, #5F41E4);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.7;
+}
+
+#root {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+/* Login Styles */
+.login-container {
+  margin: 0 auto;
+  max-width: 410px;
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .form-title {
+  text-align: center;
+  font-size: 1.37rem;
+  font-weight: 600;
+  margin-bottom: 1.87rem;
+  color: #6652BE; /* Accent color */
+}
+
+.login-container .social-login {
+  display: flex;
+  gap: 1.31rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 1.5rem; /* Adds spacing between buttons */
+  margin-top: 2rem;
+}
+
+.login-button {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 54px;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.31rem;
+  background: linear-gradient(135deg, #5F41E4, #4320df); /* Default gradient */
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Social login button styles */
+.social-login .social-button {
+  display: flex;
+  gap: 0.81rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.75rem 0;
+  border-radius: 0.31rem;
+  align-items: center;
+  justify-content: center;
+  background: #F9F8FF;
+  border: 1px solid #D5CBFF;
+  transition: 0.3s ease;
+}
+
+.social-login .social-button:hover {
+  border-color: #5F41E4;
+  background: #f1eff9;
+}
+
+.social-login .social-button .social-icon {
+  width: 23px;
+}
+
+.login-container .separator {
+  position: relative;
+  margin: 1.5rem 0;
+  text-align: center;
+  background: #fff;
+}
+
+.login-container .separator span {
+  z-index: 1;
+  font-weight: 500;
+  color: #6652BE;
+  position: relative;
+  background: #fff;
+  font-size: 1.06rem;
+  padding: 0 0.9rem;
+}
+
+.login-container .separator::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: #bfb3f2;
+}
+
+.login-form .input-wrapper {
+  height: 54px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.login-form .input-field {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 1.06rem;
+  border-radius: 0.31rem;
+  border: 1px solid #bfb3f2;
+  padding: 0px 1.25rem 0 3.12rem;
+  transition: 0.2s ease;
+}
+
+.login-form .input-field:focus {
+  border-color: #5F41E4;
+}
+
+.login-form .input-field::placeholder {
+  color: #9284c8;
+}
+
+.login-form .input-wrapper i {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  display: flex;
+  color: #a395e0;
+  align-items: center;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+}
+
+.login-form .input-wrapper i:not(.eye-icon) {
+  left: 0.93rem;
+  pointer-events: none;
+}
+
+.login-form .input-field:focus ~ i:not(.eye-icon) {
+  color: #5F41E4;
+}
+
+.login-form .input-wrapper i.eye-icon {
+  display: none;
+  right: 0.93rem;
+  color: #917DE8;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.login-form .input-wrapper .input-field:valid ~ .eye-icon {
+  display: flex;
+}
+
+.login-form .forgot-password-link {
+  display: block;
+  width: fit-content;
+  margin-top: -0.44rem;
+}
+
+.login-form .login-button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 54px;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.31rem;
+  background: linear-gradient(135deg, #5F41E4, #4320df); /* Default gradient */
+  transition: 0.3s ease;
+}
