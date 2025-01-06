@@ -33,7 +33,7 @@ This is a simple user authentication app built with **React** and **Vite**, feat
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/user-auth-app.git
-cd user-auth-app
+git clone https://github.com/DEVJDR/kplrAssignment.git
+cd kplrAssignment
 npm install
 npm run dev
